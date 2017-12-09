@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义商城</title>
+    <script src="../node_modules/_angular@1.6.7@angular/angular.js"></script>
+    <script src="./node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="./stait/css/index.css">
+</head>
+<body ng-app="myApp" ng-controller="demoCtrl">
+    <!-- <input type="text" ng-model="msg"> -->
+     <div class="app">
+        <a href="#!/home">angular一号</a>
+        <a href="#!/profile">angular二号</a>
+        <ui-view></ui-view>
+    </div>
+    
+</body>
+<script>
+  var app=angular.module('myApp',['router','ui.router']);
+  app.controller('demoCtrl',['$scope',function(scope){
+    scope.msg='一二三四五';
+  }])
+
+</script>
+</html>
